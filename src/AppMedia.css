@@ -1,0 +1,65 @@
+/* större än 750 bredd => stor skärm */
+
+@media (min-width: 750px) {
+  .contactpage {
+    grid-template-columns: 1fr 1fr; 
+  }
+  #profildata{
+    padding: auto;
+    margin: auto;
+    padding-bottom: 100%;
+    padding-right: 50%;
+  }
+  h2 {
+    font-size: 2.2rem; 
+  }
+  #profildata h2 {
+    font-size: 2.2rem; 
+    padding-right:  3rem;
+  }
+  #profilbild{
+    max-width:80%;
+    padding-left: 20%;
+    padding-top: 5%;
+  }
+  .headertext{
+    font-size: 2.8rem;
+    padding-top: 0;
+  }
+  .menu-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .menu-nav-ul {
+    list-style-type: none;
+    padding: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 0.3rem;
+    top: 8.5rem;
+    width: 12rem;
+    z-index: 500;
+    font-size: 1.5rem;
+    background-color: black;
+    border-radius: 0.8rem;
+    box-shadow: -0.5rem 0.5rem 1.5rem rgba(255, 255, 255, 0.9);
+    text-align: center;
+    left: auto; 
+    right: auto 0; 
+    bottom: auto; 
+  }
+  .menu-nav-li {
+    margin: 0.5rem 0rem 0.5rem;
+  }
+  .menu-nav-li a {
+    color: inherit;
+  }
+  .menu-nav-li a.active {
+    color: turquoise;
+    font-weight: bold;
+  }
+
+}

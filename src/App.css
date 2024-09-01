@@ -1,0 +1,131 @@
+:root {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: black;
+}
+a {
+  font-weight: 500;
+  color: turquoise;
+  text-decoration: inherit;
+}
+a:hover {
+  color: turquoise;
+}
+body {
+  margin: 0;
+  display: flex;     
+  place-items: center;
+}
+h2{
+  margin-top: 0.5rem;
+  text-align: center;
+}
+.header{
+  background-image: url('photos/tur.jpg');
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 10rem;
+  align-items: center;
+}
+.headertext{
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: white;
+  text-shadow: 0.5rem 0.4rem 0.4rem rgba(0, 0, 0, 0.9);
+  margin-top: 0;
+  padding-top: 0.5rem;
+  text-align: center;
+}
+.fa-instagram {
+  position: absolute;
+  left: 1rem;
+  top: 6rem;
+  font-size: 2.8rem;
+  color: white;
+  background-color: rgba(64, 224, 208, 0.9);
+  border-radius: 0.8rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  padding-right: 0.3rem;
+  padding-left: 0.3rem;
+  box-shadow: 0.5rem 0.4rem 0.4rem rgba(0, 0, 0, 0.9);
+}
+.fa-instagram:hover {
+  color: white;
+}
+.fa-bars {
+  position: absolute;
+  right: 1rem;
+  top: 6rem;
+  font-size: 2rem;
+  color: white;
+  background-color: rgba(64, 224, 208, 0.9);
+  border-radius: 0.9rem;
+  padding: 0.7rem;
+  box-shadow: 0.5rem 0.4rem 0.4rem rgba(0, 0, 0, 0.9);
+}
+.fa-bars:hover {
+  color: white;
+}
+.menu-nav-ul {
+  list-style-type: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 7rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 3rem;
+  background-color: black;
+  text-align: center;
+}
+.menu-nav-li {
+  margin: 1rem 0; 
+  margin-right: 2rem;
+}
+.menu-nav-li a {
+  color: white;
+}
+.menu-nav-li a.active {
+  color: turquoise;
+  font-weight: bold;
+}
+.footer {
+background-color: turquoise;
+min-height: 1.5rem;
+width: 100vw;
+position: fixed;
+bottom: 0rem;
+font-size: 1.2rem;
+font-weight: 900;
+color: black;
+text-align: center;
+}
+.contactpage {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+#profilbild{
+  max-width: 100%;
+}
+#profildata{
+  display: grid;
+}
+#profildata p {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+.homepage p{
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+}
+
