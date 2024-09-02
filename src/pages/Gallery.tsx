@@ -19,7 +19,6 @@ const AlbumCard: React.FC<{ name: string; cover: string; onClick: () => void }> 
     <p id='albumname'>{name}</p>
 </div>
 );
-
 const Gallery: React.FC = () => {
 const navigate = useNavigate();
 
