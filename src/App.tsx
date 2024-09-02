@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
 import './AppMedia.css';
 import './Gallery.css';
@@ -19,6 +19,8 @@ function App(): JSX.Element {
         <Header />
         <main>
           <Routes>
+            {/* Omdirigera från root till /hem */}
+            <Route path="/" element={<Navigate replace to="/hem" />} />
             <Route path="/hem" element={<HomePage />} />
             <Route path="/galleri" element={<Gallery />} />
             <Route path="/galleri/:albumPath" element={<Pictures />} />
