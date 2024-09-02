@@ -19,7 +19,6 @@ function App(): JSX.Element {
         <Header />
         <main>
           <Routes>
-            {/* Omdirigera från root till /hem */}
             <Route path="/" element={<Navigate replace to="/hem" />} />
             <Route path="/hem" element={<HomePage />} />
             <Route path="/galleri" element={<Gallery />} />
