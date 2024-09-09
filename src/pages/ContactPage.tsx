@@ -7,8 +7,8 @@ const ContactPage: React.FC = () => {
             <img src={profilbild} alt="Profilbild" id='profilbild'/>
             <div id='profildata'>
             <h2>Kontakt</h2>
-            <p>Telefon: 70700707070700</p>
-            <p><a href="https://www.instagram.com/crumbsbyemelie/">Kontakt via Instagram</a></p>
+            <p>Kontakt sker via Instagram.</p>
+            <p><a href="https://www.instagram.com/crumbsbyemelie/">Länk till Instagram</a></p>
             </div>
             </div>
     );
