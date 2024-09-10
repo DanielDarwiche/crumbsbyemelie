@@ -1,7 +1,27 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { albumImages } from './PictureImporter';
-import Modal from './Modal';  
+import Modal from './Modal';
+import blurredPlaceholder from '../photos/blurred/barntårta_s.jpg'; 
+
+const PictureCard: React.FC<{ src: string; alt: string; onClick: () => void }> = 
+({ src, alt, onClick }) => {
+    const [imageLoaded, setImageLoaded] = useState(false);
+
+    return (
+        <div className="picture-album-card" onClick={onClick}>
+            <div className="-picture-image-wrapper">
+                <img src={blurredPlaceholder} alt={`${alt} (low res)`} className="picture-blur-image"/>
+                <img 
+                    src={src} 
+                    alt={alt} 
+                    className={`picture-main-image ${imageLoaded ? 'loaded' : ''}`}
+                    onLoad={() => setImageLoaded(true)}
+                />
+            </div>
+        </div>
+    );
+};
 
 const Pictures: React.FC = () => {
     const { albumPath } = useParams<{ albumPath: string }>();
@@ -29,14 +49,13 @@ const Pictures: React.FC = () => {
                     <button id='backbutton' onClick={() => navigate(-1)} >
                         {'⬅ Tillbaka'}
                     </button>
-                    <div className="pictures-grid">
+                    <div className="albums">
                         {images.map((img, index) => (
-                            <img 
-                                key={index} 
-                                src={img} 
-                                alt={`Picture ${index + 1}`} 
-                                loading="lazy" 
-                                onClick={() => openModal(img)}  
+                            <PictureCard 
+                                key={index}
+                                src={img}
+                                alt={`Picture ${index + 1}`}
+                                onClick={() => openModal(img)}
                             />
                         ))}
                     </div>

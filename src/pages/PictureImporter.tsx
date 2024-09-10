@@ -42,3 +42,6 @@ tårtor: [bdaycake, bigcake, cakesabove, examcake, lyxcake, prinsess, whitecake,
 barntårtor: [awesome, browncake, childscake, mimmi, purplebaby, rosacake, spiderman],
 övrigt: [praliner, smallcakes, smallcakes2, smallcakes3, smallcakes4, specialare,meatcake],
 };
+
+
+ 

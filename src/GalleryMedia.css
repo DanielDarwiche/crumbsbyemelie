@@ -1,5 +1,4 @@
 /* större än 750 bredd => stor skärm */
-
 @media (min-width: 750px) {
     .albums {
         grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -9,40 +8,59 @@
     } 
     .album-card {
         border: 0.4rem solid turquoise;
-        height: 20rem;
+        min-height: 20rem; 
     }
-    .album-card img {
-        height: 85%;
+    .album-card .image-wrapper {
+        height: 85%; 
+    }
+    .album-card .image-wrapper img {
+        height: 100%; 
     }
     #albumname {
         font-size: 2rem;
     }
-/* Albumens bilder nedan */
-.pictures-grid {
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    justify-content: center;        
-    gap: 2rem;
-    padding: 2rem;
-}
-.pictures-grid img {
-    border: 0.4rem solid turquoise;
-    height: 20rem;    
-    border-radius: 1rem;
-    overflow: hidden;
-    width: 100%;
-    object-fit: cover; 
-}
-#backbutton{
-    margin-left: 2rem;
-}
-/* Modal nedan */
-.modal-image {
-    max-width: 90%;
-    max-height: 90%;
-}
-.modal-close-button {
-    font-size: 2rem;
-    top: 2rem;
-    right: 15%;
-} 
+    /* Albumens bilder nedan */
+    .pictures-grid {
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        justify-content: center;        
+        gap: 2rem;
+        padding: 2rem;
+    }
+    .pictures-grid img {
+        border: 0.4rem solid turquoise;
+        height: 20rem;    
+        border-radius: 1rem;
+        overflow: hidden;
+        width: 100%;
+        object-fit: cover; 
+    }
+    #backbutton{
+        margin-left: 2rem;
+    }
+    /* Modal nedan */
+    .modal-image {
+        max-width: 90%;
+        max-height: 90%;
+    }
+    .modal-close-button {
+        font-size: 2rem;
+        top: 2rem;
+        right: 15%;
+    } 
+
+     /* Lägg till dessa för Pictures.tsx */
+    .picture-album-card {
+        border: 0.4rem solid turquoise;
+        min-height: 20rem; 
+    }
+    .-picture-image-wrapper {
+        height: 100%;
+    }
+    .picture-blur-image,
+    .picture-main-image {
+        height: 100%;
+    }
+
+
+
 }
