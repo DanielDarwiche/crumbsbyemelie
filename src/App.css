@@ -11,8 +11,7 @@ a:hover {
 }
 body {
   margin: 0;
-  display: flex;     
-  place-items: center;
+  min-height: 100vh;
   background-image: url(./photos/bread/finabullar.jpg);
   background-size: cover;
   background-repeat: no-repeat;
