@@ -12,23 +12,13 @@ a:hover {
 body {
   margin: 0;
   min-height: 100vh;
-  background-image: url(./photos/bread/finabullar.jpg);
+  background-image: url(./photos/dark.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
 }
 
-body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6); /* Justera sista värdet för önskad transparens */
-  z-index: -1;
-}
 h2{
   margin-top: 0.5rem;
   text-align: center;
