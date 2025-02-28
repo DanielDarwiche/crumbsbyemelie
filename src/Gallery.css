@@ -142,9 +142,22 @@
         min-height: 16rem;
     }
     #profilbild {
-        width: 45%; 
+        width: 60%; 
         float: none; 
         margin: 0 auto;
     }
+    .picture-side-text {
+        padding-left: 0rem;
+        text-align: center; 
+    }
+    #albumname {
+        margin: 0;
+        font-size: 1.3rem;
+    }
+    #pic-albumname {
+        margin: 0;
+        font-size: 1.3rem;
+    }
 
+    
 }
