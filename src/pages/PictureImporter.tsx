@@ -6,7 +6,7 @@ import finebread from '/src/photos/bread/finebread.jpg';
 import finebread2 from '/src/photos/bread/finebread2.jpg';
 import frallor from '/src/photos/bread/frallor.jpg';
 import wiener from '/src/photos/bread/wiener.jpg';
-
+ 
 // Tårtor
 import bdaycake from '/src/photos/cakes/bdaycake.jpg';
 import bigcake from '/src/photos/cakes/bigcake.jpg';
