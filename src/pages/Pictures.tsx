@@ -9,19 +9,22 @@ const PictureCard: React.FC<{ src: string; alt: string; onClick: () => void }> =
     const [imageLoaded, setImageLoaded] = useState(false);
 
     return (
-        <div className="picture-album-card" onClick={onClick}>
-            <div className="-picture-image-wrapper">
+        <div className="album-card" onClick={onClick}>
+            <div className="image-wrapper">
                 <img src={blurredPlaceholder} alt={`${alt} (low res)`} className="picture-blur-image"/>
                 <img 
                     src={src} 
                     alt={alt} 
-                    className={`picture-main-image ${imageLoaded ? 'loaded' : ''}`}
+                    className={`main-image ${imageLoaded ? 'loaded' : ''}`}
                     onLoad={() => setImageLoaded(true)}
                 />
             </div>
+            <p id='pic-albumname'> {alt.split(' ')[1]}</p>
+
         </div>
     );
 };
+ 
 
 const Pictures: React.FC = () => {
     const { albumPath } = useParams<{ albumPath: string }>();
@@ -42,14 +45,15 @@ const Pictures: React.FC = () => {
     };
 
     return (
-        <div className="pictures-container">
+        <div>
             {albumPath ? (
                 <>
-                    <h2>{albumPath.charAt(0).toUpperCase() + albumPath.slice(1)}</h2>
+                    <h2 id='albumh2'>
+                        {albumPath.charAt(0).toUpperCase() + albumPath.slice(1)}</h2>
                     <button id='backbutton' onClick={() => navigate(-1)} >
                         {'⬅ Tillbaka'}
                     </button>
-                    <div className="albums">
+                    <div className="pic-albums">
                         {images.map((img, index) => (
                             <PictureCard 
                                 key={index}

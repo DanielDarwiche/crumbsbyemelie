@@ -1,30 +1,35 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import './AppMedia.css';
 import './Gallery.css';
-import './GalleryMedia.css';
 
-import Header from './components/Header';
 import Footer from './components/Footer';
-import HomePage from './pages/HomePage';
 import Gallery from './pages/Gallery';
-import ContactPage from './pages/ContactPage';
 import Pictures from './pages/Pictures';
 
-// yarn dev
+import profilbild from './photos/profil.jpg';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 function App(): JSX.Element {
   return (
     <Router>
       <div className="App">
-        <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/galleri" element={<Gallery />} />
-            <Route path="/galleri/:albumPath" element={<Pictures />} />
-            <Route path="/kontakt" element={<ContactPage />} />
-          </Routes>
-        </main>
+        <Routes>
+          <Route path="/" element={
+            <>
+              <div className="startdiv">
+                <div className='headpicture'>
+                  <img src={profilbild} id='profilbild'/>
+                </div>
+                <div className='picture-side-text'>
+                  <h1>Välkommen till Crumbs by Emelie!</h1>
+                  <p>Nedan kan du se tidigare bakverk och beställningar.<br />
+                  Kontakt sker via <a href="https://www.instagram.com/crumbsbyemelie/">Instagram.</a></p>
+                </div>
+              </div>
+              <Gallery />
+            </>
+          } />
+          <Route path="/galleri/:albumPath" element={<Pictures />} />
+        </Routes>
         <Footer />
       </div>
     </Router>

@@ -13,9 +13,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, imageSrc, onClose }) => {
         <div className="modal-overlay" onClick={onClose}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
                 <img src={imageSrc} alt="Zoomed" className="modal-image" />
-                <button className="modal-close-button" onClick={onClose}>
-                    Stäng
-                </button>
+                <button className="modal-close-button" onClick={onClose}>X</button>
             </div>
         </div>
     );
